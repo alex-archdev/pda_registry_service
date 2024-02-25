@@ -6,9 +6,12 @@ Este repositorio fue escrito en python v3.10.12, para instalar las librerias se 
 ```python
 pip install -r requirements.txt
 ```
-
 ## debe tener un archivo .env
-tomar el archivo .env.example y renombrarlo .env, luego se deben colocar las variables necesarias
+tomar el archivo .env.example y renombrarlo .env, luego se deben colocar las variables necesarias y
+cargar las variables de entorno en el ambiente
+```python
+export $(cat .env)
+```
 
 ## levantar la base de datos
 el docker ya lee de variables de entorno si y solo si el archivo se llama .env, por lo tanto el paso anterior ya debe estár completado
@@ -17,10 +20,7 @@ docker-compose -f "docker-compose.yml" up
 ```
 
 ## ejecutar el servidor
-se deben cargar las variables de entorno en el ambiente
-```python
-export $(cat .env)
-```
+
 Luego se procede a levantar el servidor
 ```python
 flask --app src/propiedadesDA/api run -p 3000
