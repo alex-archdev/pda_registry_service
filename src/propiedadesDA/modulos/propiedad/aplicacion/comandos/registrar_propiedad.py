@@ -15,7 +15,6 @@ class RegistrarPropiedad(Comando):
     direccion: str
     fecha_actualizacion: str
     fecha_creacion: str
-    id_propiedad: str
 
 class RegistrarPropiedadHandler(RegistrarPropiedadBaseHandler):
     
@@ -25,8 +24,7 @@ class RegistrarPropiedadHandler(RegistrarPropiedadBaseHandler):
             coordenadas=comando.coordenadas,
             direccion=comando.direccion,
             fecha_actualizacion=comando.fecha_actualizacion,
-            fecha_creacion=comando.fecha_creacion,
-            id_propiedad=comando.id_propiedad
+            fecha_creacion=comando.fecha_creacion
         )
         try:
             propiedad: Propiedad = self.fabrica_propiedad.crear_objeto(propiedad_dto, MapeadorPropiedadDTOJson())

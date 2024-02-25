@@ -19,3 +19,24 @@ Luego se procede a levantar el servidor
 ```python
 flask --app src/propiedadesDA/api run -p 3000
 ```
+
+## endpoint para crear una propiedad
+
+endpoint: http://localhost:3000/propiedad
+
+tipo: POST
+body
+```json
+{
+    "coordenadas": "{'lat': 32.23, 'lng': 32.34}",
+    "direccion": "cra 132 N 122 - 22",
+    "fecha_creacion": "2024-02-02 09:02:00",
+    "nombre": "villeta"
+}
+```
+
+## endpoint para consultar una propiedad a analizar
+
+endpoint: http://localhost:3000/analisis/propiedad/<propiedad_id>
+
+tipo: GET

@@ -10,7 +10,6 @@ class MapeadorPropiedadDTOJson(AppMap):
         propiedad_dto.fecha_actualizacion = externo.get('fecha_creacion')
         propiedad_dto.fecha_creacion = externo.get('fecha_creacion')
         propiedad_dto.nombre = externo.get('nombre')
-        propiedad_dto.id_propiedad = externo.get('id_propiedad')
         return propiedad_dto
     
     def dto_a_externo(self, dto: PropiedadDTO) -> dict:
@@ -26,6 +25,5 @@ class MapeadorPropiedadDTOJson(AppMap):
         propiedad.fecha_actualizacion = dto.fecha_actualizacion
         propiedad.fecha_creacion = dto.fecha_creacion
         propiedad.nombre = dto.nombre
-        propiedad.id_propiedad = dto.id_propiedad
 
         return propiedad

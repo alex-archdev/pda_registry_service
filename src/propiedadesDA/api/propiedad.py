@@ -19,8 +19,7 @@ def registrar():
         propiedad_dto.coordenadas,
         propiedad_dto.direccion,
         propiedad_dto.fecha_actualizacion,
-        propiedad_dto.fecha_creacion,
-        propiedad_dto.id_propiedad
+        propiedad_dto.fecha_creacion
         )
 
     ejecutar_comando(comando)
