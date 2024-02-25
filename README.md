@@ -16,7 +16,7 @@ export $(cat .env)
 ## levantar la base de datos
 el docker ya lee de variables de entorno si y solo si el archivo se llama .env, por lo tanto el paso anterior ya debe estár completado
 ```python
-docker-compose -f "docker-compose.yml" up
+docker-compose --env-file ./.env -f "docker-compose.yml" up
 ```
 
 ## ejecutar el servidor
