@@ -1,8 +1,14 @@
 # pda_registry_service
 Servicio de PDA que se utiliza para el registro de información.
 
+## consideraciones previas
+Este repositorio fue escrito en python v3.10.12, para instalar las librerias se debe lanzar
+```python
+pip install -r requirements.txt
+```
+
 ## debe tener un archivo .env
-tomar el archivo .env.example y renombrarlo .env, luego se deben colocar las variables correctas
+tomar el archivo .env.example y renombrarlo .env, luego se deben colocar las variables necesarias
 
 ## levantar la base de datos
 el docker ya lee de variables de entorno si y solo si el archivo se llama .env, por lo tanto el paso anterior ya debe estár completado
